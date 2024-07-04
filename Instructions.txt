@@ -1,3 +1,63 @@
 npm init -y
 npm install express bcryptjs jsonwebtoken mongoose
 npm i dotenv
+
+Routes:
+1. Register User
+Request Type: POST
+URL: http://localhost:7000/api/register
+BODY: 
+{
+  "username": "admin",
+  "email": "test@gmail.com",
+  "password": "test"
+}
+
+2.Login User
+Request Type: POST
+URL: http://localhost:7000/api/login
+BODY: 
+{
+  "email": "test@gmail.com",
+  "password": "test"
+}
+
+3.Update User
+Request Type: PUT
+URL: http://localhost:7000/api/update-user
+BODY: 
+{
+    "username": "admin1"
+}
+
+Headers: pass authorization token of user login
+Authorization: token
+
+4. Delete User
+Request Type: DELETE
+URL: http://localhost:7000/api/delete-user
+
+Headers: pass authorization token of user login
+Authorization: token
+ 
+5.Register Admin User
+Request Type: POST
+URL: http://localhost:7000/api/register-admin
+BODY: 
+{
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "password": "admin"
+}
+
+Headers: pass authorization token of admin login account
+Authorization: token
+
+6.Get All Users(For admins only)
+Request Type: GET
+URL: http://localhost:7000/api/users
+
+Headers: pass authorization token of admin login account
+Authorization: token
+ 
+
