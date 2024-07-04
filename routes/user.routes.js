@@ -6,6 +6,8 @@ import {
   getAllUsers,
   deleteUser,
   updateUser,
+  forgotPassword,
+  resetPassword,
 } from "../controllers/user.controller.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 import { checkIsAdmin } from "../middleware/adminMiddleware.js";
@@ -27,5 +29,11 @@ router.delete("/delete-user", verifyToken, deleteUser);
 
 // Protected route to edit user's own account
 router.put("/update-user", verifyToken, updateUser);
+
+// Forgot Password route
+router.post("/forgot-password", forgotPassword);
+
+// Reset Password route
+router.post("/reset-password", resetPassword);
 
 export default router;

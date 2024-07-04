@@ -1,6 +1,7 @@
 npm init -y
 npm install express bcryptjs jsonwebtoken mongoose
 npm i dotenv
+npm install nodemailer
 
 Routes:
 1. Register User
