@@ -1,5 +1,5 @@
 npm init -y
-npm install express bcryptjs jsonwebtoken mongoose
+npm install express bcryptjs jsonwebtoken mongoose cors
 npm i dotenv
 npm install nodemailer
 
@@ -9,7 +9,7 @@ Request Type: POST
 URL: http://localhost:7000/api/register
 BODY: 
 {
-  "username": "admin",
+  "username": "test",
   "email": "test@gmail.com",
   "password": "test"
 }
